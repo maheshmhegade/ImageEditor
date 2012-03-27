@@ -6,7 +6,7 @@ Add two images seletced from directory.
  Select images pressing push Butoon Load Image *
  Vary Add Ratio to get different Ratio of two images.
  You Can always save the modified Image by pressing save.
-
+It has facility to load frame from *.avi video by entering desired frame number in text edit and perform following operations  
 View Image throgh different colour spaces by adjusting Red,Green,Blue slider values 
 
 It helps for quicker image analyses for instance we can analyse canny edge detected for loaded image,also hsv colour space  information,negative
