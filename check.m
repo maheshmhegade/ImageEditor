@@ -23,7 +23,7 @@ varargout{1} = handles.output;
 function figure1_WindowButtonDownFcn(hObject, eventdata, handles)
 function pushbutton1_Callback(hObject, eventdata, handles)
 
-mIconFile       =   fullfile('D:\songs\wallpapers\');
+mIconFile       =   fullfile('/media/');
 filespec = { '*.jpg', 'JPEG files (*.jpg)';...
     '*.bmp', 'BMP files (*.bmp)'; ...
     '*.tif', 'TIFF files (*.tif)';
@@ -254,7 +254,7 @@ set(handles.pushbutton5,'CData',L)
 
 guidata(hObject, handles);
 function pushbutton9_Callback(hObject, eventdata, handles)
-mIconFile       =   fullfile('D:\songs\wallpapers\');
+mIconFile       =   fullfile('/media/');
 filespec = { '*.jpg', 'JPEG files (*.jpg)';...
     '*.bmp', 'BMP files (*.bmp)'; ...
     '*.tif', 'TIFF files (*.tif)';
@@ -328,7 +328,7 @@ if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColo
     set(hObject,'BackgroundColor',[.9 .9 .9]);
 end
 function pushbutton17_Callback(hObject, eventdata, handles)
-mIconFile       =   fullfile('D:\soft\matlabinstalled\chess\');
+mIconFile       =   fullfile('/media/');
 filespec = { '*.avi', 'AVI files (*.avi)';};
 [filename, pathname] = uigetfile(filespec, ...
     'Pick an icon image file', mIconFile);
