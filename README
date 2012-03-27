@@ -1,1 +1,13 @@
-Image editor with basic features to add two images seletced from directory.  
+
+Image editor with following basic features 
+
+How to use
+Add two images seletced from directory.
+ Select images pressing push Butoon Load Image *
+ Vary Add Ratio to get different Ratio of two images.
+ You Can always save the modified Image by pressing save.
+
+View Image throgh different colour spaces by adjusting Red,Green,Blue slider values 
+
+It helps for quicker image analyses for instance we can analyse canny edge detected for loaded image,also hsv colour space  information,negative
+greyscale image.Histograms indicating number of pixels of different intensities of different layers.
