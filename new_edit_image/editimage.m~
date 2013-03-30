@@ -197,7 +197,6 @@ elseif(strcmp(handles.colorFilter,'mannual'))
     handles.redValue = get(handles.slider1,'Value');
     handles.greenValue = get(handles.slider2,'Value');
     handles.blueValue = get(handles.slider3,'Value');
-    handles.displayImage = generateEditImage(hObject,handles,3);
 end
 displayImage(hObject,handles)
 guidata(hObject, handles);
@@ -209,7 +208,7 @@ editedImage(:,:,1) = grayLayer;
 editedImage(:,:,2) = grayLayer;
 editedImage(:,:,3) = grayLayer;
 
-if(~strcmp(handles.colorFilter,'mannual'))
+if(~strcmp(handles.colorFilter,'mannual')
 for i=1 : size(handles.originalImage,1)
     for j=1 : size(handles.originalImage,2)
         if (handles.originalImage(i,j,channelNumber) > 150)
@@ -221,12 +220,12 @@ for i=1 : size(handles.originalImage,1)
 end 
 
 else
-redValue = handles.redValue
-greenValue = handles.greenValue
-blueValue = handles.blueValue
+redValue = handles.redValue;
+greenValue = handles.greenValue;
+blueValue = handles.blueValue;
 for i=1 : size(handles.originalImage,1)
     for j=1 : size(handles.originalImage,2)
-        if (abs(handles.originalImage(i,j,1)-redValue) < 5 && abs(handles.originalImage(i,j,2)-greenValue <5 && abs(handles.originalImage(i,j,3)-blueValue) < 5) )
+        if (abs(handles.originalImage(i,j,1)-redValue) < 5 )
            editedImage(i,j,1) = handles.originalImage(i,j,1);
            editedImage(i,j,2) = handles.originalImage(i,j,2);
            editedImage(i,j,3) = handles.originalImage(i,j,3);
@@ -261,10 +260,6 @@ guidata(hObject, handles);
 
 % --- Executes on slider movement.
 function slider1_Callback(hObject, eventdata, handles)
-handles.previousFilter = handles.colorFilter;
-setRadioButtonStatus(hObject,handles);
-handles.colorFilter = 'mannual';
-guidata(hObject, handles);
 % hObject    handle to slider1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
@@ -287,10 +282,6 @@ end
 
 % --- Executes on slider movement.
 function slider2_Callback(hObject, eventdata, handles)
-handles.previousFilter = handles.colorFilter;
-setRadioButtonStatus(hObject,handles);
-handles.colorFilter = 'mannual';
-guidata(hObject, handles);
 % hObject    handle to slider2 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
@@ -301,7 +292,6 @@ guidata(hObject, handles);
 
 % --- Executes during object creation, after setting all properties.
 function slider2_CreateFcn(hObject, eventdata, handles)
-
 % hObject    handle to slider2 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
@@ -314,10 +304,6 @@ end
 
 % --- Executes on slider movement.
 function slider3_Callback(hObject, eventdata, handles)
-handles.previousFilter = handles.colorFilter;
-setRadioButtonStatus(hObject,handles);
-handles.colorFilter = 'mannual';
-guidata(hObject, handles);
 % hObject    handle to slider3 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
