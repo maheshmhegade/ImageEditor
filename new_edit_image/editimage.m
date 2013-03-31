@@ -221,9 +221,9 @@ for i=1 : size(handles.originalImage,1)
 end 
 
 else
-redValue = handles.redValue
-greenValue = handles.greenValue
-blueValue = handles.blueValue
+redValue = handles.redValue;
+greenValue = handles.greenValue;
+blueValue = handles.blueValue;
 for i=1 : size(handles.originalImage,1)
     for j=1 : size(handles.originalImage,2)
         if (abs(handles.originalImage(i,j,1)-redValue) < 5 && abs(handles.originalImage(i,j,2)-greenValue <5 && abs(handles.originalImage(i,j,3)-blueValue) < 5) )
